@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="shortcut icon" type="image/x-icon" href="https://avatars1.githubusercontent.com/u/41344371?s=60&v=4"/>
+ <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+<script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+
+  <title>InvesTech Dev Environment</title>
+  <link rel="stylesheet" type="text/css" href="./build/style.min.css">
+</head>
+<body>
+  <div id="maingraph"></div>
+</body>
+<script src="./build/bundle.min.js"></script>
+<script>
+  var curId = Number(location.pathname.split('/')[1]);
+  
+  ReactDOM.render(
+    React.createElement(MainGraph, {id: curId}),
+    document.getElementById('maingraph')
+  );
+</script>
+</html>
